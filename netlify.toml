@@ -1,0 +1,17 @@
+# Netlify build configuration.
+#
+# The Next.js runtime plugin is what makes server components, the server action
+# and the dynamic route work. Without it Netlify would publish only static
+# output and every query would fail at runtime.
+#
+# Note: no `publish` key. Runtime v5 sets the publish directory itself, and
+# pinning it to .next makes its post-build publish step conflict.
+[build]
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  # Matches .nvmrc so local and deployed builds run the same Node.
+  NODE_VERSION = "22"

@@ -1,0 +1,31 @@
+node_modules/
+.next/
+out/
+build/
+.netlify/
+
+# Local env files — never commit credentials
+.env
+.env.local
+.env.*.local
+
+# Vendor documentation. Kept out of version control deliberately: the
+# MasterControl pack contains production SYSADMIN and e-signature credentials,
+# and git history is permanent. What matters from these documents has been
+# written up in BMS.md, DataNinja.md and MasterControl.md — without secrets.
+*.docx
+*.pdf
+swagger.json
+
+# Per-system analysis, kept out of this public repo. These describe Galaxy's
+# internal architecture, tenant URLs and a credential-handling finding — none
+# of which belongs in a public git history. They live on the working machine
+# and are shared directly with the team instead.
+Dasboard.md
+BMS.md
+DataNinja.md
+MasterControl.md
+
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
